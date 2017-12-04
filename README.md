@@ -17,6 +17,20 @@ This function is based on Firebase google account sign in function.
 
  ## 2. Notification sender
  This function is based on Firebase database and storage.
- Caregiver can send text notification and image notification.
+ Caregiver can send text notification.
+ ![Sign in](https://raw.github.com/RunzhouHan/Patient/master/Screen%20Shot%202017-12-03%20at%2010.21.29%20PM.png)
+
  When there is a new child found in database, The 'click me' button on patient side will appear.
- The 'click me' button will be hidden after the patient clicks it and it 
+  ![Sign in](https://raw.github.com/RunzhouHan/Patient/master/Screen%20Shot%202017-12-03%20at%2010.26.31%20PM.png)
+
+ The 'click me' button will be hidden after the patient clicks it and it will send a signal to Firebase as a response to let caregiver know that the patient has recieved the notification.
+  ![Sign in](https://raw.github.com/RunzhouHan/Patient/master/Screen%20Shot%202017-12-03%20at%2010.26.44%20PM.png)
+  
+Caregiver can also send image notification.
+  ![Sign in](https://raw.github.com/RunzhouHan/Patient/master/Screen%20Shot%202017-12-03%20at%2010.20.54%20PM.png)
+  ![Sign in](https://raw.github.com/RunzhouHan/Patient/master/Screen%20Shot%202017-12-03%20at%2010.21.07%20PM.png)
+  
+
+
+ 
+ 
