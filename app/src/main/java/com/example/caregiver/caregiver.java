@@ -66,20 +66,20 @@ public class caregiver extends AppCompatActivity {
         imageToUpload = (ImageView) findViewById(R.id.imageView3);
         textView = (TextView) findViewById(R.id.textView);
         mSendButton = (Button) findViewById(R.id.button);
-        mSendButton1 = (Button) findViewById(R.id.button2);
+//        mSendButton1 = (Button) findViewById(R.id.button2);
 
         //imageToUpload.setOnClickListener(this);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        mSendButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "btn_send");
-                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Next Activity");
-                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Button");
-                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
-            }
-        });
+//        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getInstancethis);
+//        mSendButton1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Bundle bundle = new Bundle();
+//                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "btn_send");
+//                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Next Activity");
+//                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Button");
+//                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+//            }
+//        });
 
 
         mMessageEditText = (EditText) findViewById(R.id.editText);
@@ -172,5 +172,11 @@ public class caregiver extends AppCompatActivity {
                 myRef.child("message").child("url").push().setValue(url);
             }
         });
+    }
+
+    public void onClick2(View view) {
+        Intent intent = new Intent(caregiver.this, Map.class);
+        startActivity(intent);
+
     }
 }

@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="67dp"
         android:onClick="onClick2"
-        android:text="Count"
+        android:text="Track patient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
