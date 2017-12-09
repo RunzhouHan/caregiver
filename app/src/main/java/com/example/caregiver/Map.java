@@ -74,7 +74,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback,
      *
      * */
 
-    // After Creating the Map Set Initial Location
+    //After Creating the Map Set Initial Location
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -165,7 +165,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback,
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
         }
-//        startLocationUpdates();
+        startLocationUpdates();
     }
 
     @Override

@@ -23,7 +23,15 @@
             android:name=".caregiver"
             android:label="Care Giver">
             <intent-filter>
-                <action android:name="com.litreily.familymember"/>
+                <action android:name="com.litreily.caregiver"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Map"
+            android:label="Track Patient">
+            <intent-filter>
+                <action android:name="com.litreily.Map"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
