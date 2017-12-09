@@ -13,10 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -46,7 +44,6 @@ public class caregiver extends AppCompatActivity {
     private DatabaseReference myRef;
     private FirebaseDatabase mFirebaseDatabase;
     private TextView textView;
-    private FirebaseAnalytics mFirebaseAnalytics;
 
     //private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder> mFirebaseAdapter;
     private DatabaseReference mFirebaseDatabaseReference;
@@ -69,15 +66,11 @@ public class caregiver extends AppCompatActivity {
         mSendButton1 = (Button) findViewById(R.id.button2);
 
         //imageToUpload.setOnClickListener(this);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         mSendButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "btn_send");
-                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Next Activity");
-                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Button");
-                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+                    Intent intent = new Intent(caregiver.this, Map.class);
+                    startActivity(intent);
             }
         });
 
@@ -173,4 +166,5 @@ public class caregiver extends AppCompatActivity {
             }
         });
     }
+
 }
