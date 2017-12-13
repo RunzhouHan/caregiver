@@ -34,7 +34,6 @@ import com.google.firebase.storage.UploadTask;
 public class caregiver extends AppCompatActivity {
 
 
-    //private SharedPreferences mSharedPreferences;
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
     public static final String MESSAGES_CHILD = "hints";
     private static final String MESSAGE_SENT_EVENT = "message_sent";
@@ -48,7 +47,6 @@ public class caregiver extends AppCompatActivity {
     private TextView textView;
     private FirebaseAnalytics mFirebaseAnalytics;
 
-    //private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder> mFirebaseAdapter;
     private DatabaseReference mFirebaseDatabaseReference;
     private Uri selectedImage;
 
@@ -78,6 +76,8 @@ public class caregiver extends AppCompatActivity {
                 bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Next Activity");
                 bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Button");
                 mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+                Intent intent = new Intent(caregiver.this, Map.class);
+                startActivity(intent);
             }
         });
 

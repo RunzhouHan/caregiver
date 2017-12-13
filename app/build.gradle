@@ -42,6 +42,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-places:10.0.1'
     compile 'com.google.android.gms:play-services-maps:10.0.1'
     compile 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
+
 }
 
 
